@@ -1,0 +1,78 @@
+use project_test;
+#employee data
+insert into employee(name,social_status,SSN,gender,start_date,email,education) values
+('Tala Alawneh','single',403326670,'Female','2022-5-4','tala@gmail.com','Bachelor' ),
+('Anas Alawneh','single',703326670,'Male','2022-6-4','anas@gmail.com','Bachelor' ),
+('Tamara Alawni','single',406326675,'Female','2021-7-29','tamara@gmail.com','Master' ),
+('Mohammad Abujaber','single',703728671,'Male','2020-1-14','mohammad@gmail.com','Master' ),
+('Raffef Khaldi','married',403326370,'Female','2020-8-1','raffef@gmail.com','Bachelor' ),
+('Jehad Hassan','married',303326670,'Male','2021-3-12','jehad@gmail.com','Master' ),
+('Emad Ali','married',703326670,'Male','2020-4-14','emad@gmail.com','Bachelor' ),
+('Jana Shobaki','single',503326670,'Female','2020-5-14','jana@gmail.com','Bachelor' ),
+('Rannen Addasi','single',703326647,'Female','2020-8-4','rannen@gmail.com','Diploma' ),
+('Ahmad Attallah','divorsed',703332670,'Male','2021-6-4','ahmad@gmail.com','Bachelor' ),
+('Tareq Zain','single',503126670,'Male','2021-6-4','tareq@gmail.com','Bachelor' ),
+('Hiba Ihsan','single',304326670,'Female','2020-6-4','hiba@gmail.com','Bachelor' ),
+('Yasmeen Yahia','married',903326670,'Female','2020-11-4','yasmeen@gmail.com','Master' ),
+('Yaman Ali','single',793326670,'Male','2020-10-4','yaman@gmail.com','Bachelor' ),
+('Rami Khalil','single',503326670,'Male','2021-4-4','rami@gmail.com','Bachelor' );
+
+#department data
+insert into department (name) values 
+('Accounting'),('IT'),('Marketing'),('Sales');
+
+#dep2emp data
+insert into dep2emp (emp_id,dep_id) values
+(1,1),(2,2),(3,3),(4,4),(5,2),(6,3),(7,4),(8,2),(9,1),(10,1),(11,2),(12,1),(13,3),(14,3),(15,1);
+ 
+ #employee address data
+ insert into emp_address (emp_id,city) values
+ (1,'Ramallah'), (2,'Ramallah'), (3,'Nablus'), (4,'Albireh'), (5,'Nablus'), (6,'Albireh'), (7,'Hebron'), (8,'Jenin'), 
+ (9,'Ramallah'), (10,'Hebron'), (11,'Bethlehem'), (12,'Tulkaram'), (13,'Jenin'), (14,'Tulkaram'), (15,'Jerusalem');
+
+#employee mobile data
+insert into mobilenumber(emp_id,mobileNumber) values
+(1,0598787699), (2,0567894321), (3,0598214569), (4,0564321789), (5,0599876443), (6,0567811134), (7,0598764333), (8,0566990087), 
+ (9,0567896665), (10,0564321111), (11,0598795553), (12,0567894321), (13,0596541123), (14,0596783332), (15,0564889098);
+
+#salary data
+insert into salary (num_hours_worked,year,month,emp_id) values
+(200,2022,6,1),(195,2022,6,2),(220,2022,6,3),(200,2022,6,4),(200,2022,6,5),(200,2022,6,6),
+(220,2022,6,7),(195,2022,6,8),(195,2022,6,9),(195,2022,6,10),(200,2022,6,11),(210,2022,6,12),
+(200,2022,6,13),(200,2022,6,14),(200,2022,6,15),
+(200,2022,7,1),(195,2022,7,2),(220,2022,7,3),(200,2022,7,4),(200,2022,7,5),(200,2022,7,6),
+(220,2022,7,7),(195,2022,7,8),(195,2022,7,9),(195,2022,7,10),(200,2022,7,11),(210,2022,7,12),
+(200,2022,7,13),(200,2022,7,14),(200,2022,7,15),
+(200,2023,5,1),(195,2023,5,2),(220,2023,5,3),(200,2023,5,4),(200,2023,5,5),(200,2023,5,6),
+(220,2023,5,7),(195,2023,5,8),(195,2023,5,9),(195,2023,5,10),(200,2023,5,11),(210,2023,5,12),
+(200,2023,5,13),(200,2023,5,14),(200,2023,5,15),
+(200,2023,3,1),(195,2023,3,2),(220,2023,3,3),(200,2023,3,4),(200,2023,3,5),(200,2023,3,6),
+(220,2023,3,7),(195,2023,3,8),(195,2023,3,9),(195,2023,3,10),(200,2023,3,11),(210,2023,3,12),
+(200,2023,3,13),(200,2023,3,14),(200,2023,3,15),
+(200,2023,2,1),(195,2023,2,2),(220,2023,2,3),(200,2023,2,4),(200,2023,2,5),(200,2023,2,6),
+(220,2023,2,7),(195,2023,2,8),(195,2023,2,9),(195,2023,2,10),(200,2023,2,11),(210,2023,2,12),
+(200,2023,2,13),(200,2023,2,14),(200,2023,2,15),
+(200,2023,1,1),(195,2023,1,2),(220,2023,1,3),(200,2023,1,4),(200,2023,1,5),(200,2023,1,6),
+(220,2023,1,7),(195,2023,1,8),(195,2023,1,9),(195,2023,1,10),(200,2023,1,11),(210,2023,1,12),
+(200,2023,1,13),(200,2023,1,14),(200,2023,1,15);
+
+
+#bounses data 
+insert into bounses (salary_id,year,month,type,num_of_hours) values
+(3,2022,6,'extra time',20),(4,2022,6,'extra time',15),(11,2022,6,'extra time',12),
+(14,2022,6,'extra time',22),(17,2022,7,'extra time',23),(20,2022,7,'extra time',24),
+(24,2022,7,'extra time',15),(27,2022,7,'extra time',22),(31,2023,5,'extra time',23),
+(34,2023,5,'extra time',25),(40,2023,5,'extra time',12),(44,2023,5,'extra time',20),
+(47,2023,3,'extra time',8),(50,2023,3,'extra time',16),(53,2023,3,'extra time',19),
+(57,2023,3,'extra time',6),(60,2023,3,'extra time',9),(66,2023,2,'extra time',10),
+(74,2023,2,'extra time',15),(81,2023,1,'extra time',16),(84,2023,1,'extra time',16);
+
+#deduction data
+insert into deduction (salary_id,year,month,type,num_of_hours) values
+(1,2022,6,'leaves',10),(6,2022,6,'absence',35),(9,2022,6,'leaves',6),
+(14,2022,6,'leaves',3),(18,2022,7,'leaves',4),(21,2022,7,'leaves',5),
+(29,2022,7,'leaves',12),(35,2023,5,'leaves',2),(37,2023,5,'leaves',3),
+(41,2023,5,'leaves',10),(44,2023,5,'leaves',4),(49,2023,3,'leaves',6),
+(55,2023,3,'leaves',6),(62,2023,2,'leaves',8),(71,2023,2,'absence',15),
+(79,2023,1,'leaves',6),(87,2023,1,'leaves',8);
+

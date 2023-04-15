@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="group.finalproject.Controller">
+   <children>
+      <VBox layoutY="100.0" prefHeight="500.0" prefWidth="900.0" style="-fx-background-color: #191919;">
+         <children>
+            <AnchorPane prefHeight="501.0" prefWidth="818.0" style="-fx-background-color: #EBCC72; -fx-background-radius: 100;">
+               <children>
+                  <Button fx:id="dashboardButton" graphicTextGap="10.0" layoutX="209.0" layoutY="98.0" mnemonicParsing="false" onAction="#openDashboard" prefHeight="50.0" prefWidth="120.0" stylesheets="@CSS/styling.css" text="Dashboard" textFill="#ebcc72">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@ICO/dashboard.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Button>
+                  <Button fx:id="employeesButton" graphicTextGap="10.0" layoutX="392.0" layoutY="98.0" mnemonicParsing="false" onAction="#openEmployees" prefHeight="50.0" prefWidth="120.0" stylesheets="@CSS/styling.css" text="Employees" textFill="#ebcc72">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@ICO/userBlack.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Button>
+                  <Button fx:id="departmentsButton" graphicTextGap="9.0" layoutX="572.0" layoutY="99.0" mnemonicParsing="false" onAction="#openDepartments" prefHeight="49.0" prefWidth="120.0" stylesheets="@CSS/styling.css" text="Departments" textFill="#ebcc72">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@ICO/department.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Button>
+                  <Button fx:id="salariesButton" graphicTextGap="10.0" layoutX="209.0" layoutY="213.0" mnemonicParsing="false" onAction="#openSalaries" prefHeight="50.0" prefWidth="120.0" stylesheets="@CSS/styling.css" text="Salaries" textFill="#ebcc72">
+                     <graphic>
+                        <ImageView fitHeight="31.0" fitWidth="43.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@ICO/salary.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets right="25.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="addSalButton" graphicTextGap="1.0" layoutX="392.0" layoutY="217.0" mnemonicParsing="false" onAction="#openAddSal" prefHeight="50.0" prefWidth="120.0" stylesheets="@CSS/styling.css" text="Add Salary" textFill="#ebcc72">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets right="25.0" />
+                     </padding>
+                     <graphic>
+                        <ImageView fitHeight="37.0" fitWidth="29.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@ICO/addSal.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="calenderButton" graphicTextGap="10.0" layoutX="572.0" layoutY="217.0" mnemonicParsing="false" onAction="#openCalender" prefHeight="50.0" prefWidth="120.0" stylesheets="@CSS/styling.css" text="Calender" textFill="#ebcc72">
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@ICO/calender.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets right="12.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="logoutButton" graphicTextGap="10.0" layoutX="392.0" layoutY="353.0" mnemonicParsing="false" onAction="#userLogOut" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #191919; -fx-background-radius: 200; -fx-cursor: hand;" text="LOG OUT" textFill="#e80400">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets right="12.0" />
+                     </padding>
+                     <graphic>
+                        <ImageView fitHeight="29.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@ICO/logout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER_LEFT" layoutX="-5.0" prefHeight="100.0" prefWidth="906.0" style="-fx-background-color: #191919;">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <children>
+            <ImageView fitHeight="99.0" fitWidth="256.0" pickOnBounds="true" preserveRatio="true" translateX="30.0">
+               <HBox.margin>
+                  <Insets left="16.0" />
+               </HBox.margin>
+               <image>
+                  <Image url="@ICO/TMT.jpg" />
+               </image>
+            </ImageView>
+            <Label contentDisplay="CENTER" text="Salaries DB" textFill="#ebcc72">
+               <padding>
+                  <Insets left="50.0" />
+               </padding>
+               <font>
+                  <Font name="Gill Sans MT Ext Condensed Bold" size="38.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

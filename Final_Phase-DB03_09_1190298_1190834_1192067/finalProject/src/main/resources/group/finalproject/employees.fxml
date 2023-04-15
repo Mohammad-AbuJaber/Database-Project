@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="group.finalproject.employeesController">
+   <children>
+      <TabPane layoutY="96.0" prefHeight="504.0" prefWidth="900.0" stylesheets="@CSS/styling.css" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="View Employees">
+               <content>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="empTable" prefHeight="447.0" prefWidth="668.0" stylesheets="@CSS/styling.css">
+                          <columns>
+                            <TableColumn fx:id="ID" prefWidth="75.0" text="ID" />
+                            <TableColumn fx:id="FName" prefWidth="96.0" text="First Name" />
+                              <TableColumn fx:id="LName" prefWidth="92.0" text="Last Name" />
+                              <TableColumn fx:id="SSN" prefWidth="86.0" text="SSN" />
+                              <TableColumn fx:id="depID" prefWidth="127.0" text="Department Name" />
+                              <TableColumn fx:id="empAddress" minWidth="0.0" prefWidth="111.0" text="Address" />
+                          </columns>
+                        </TableView>
+                        <VBox alignment="TOP_CENTER" layoutX="667.0" layoutY="1.0" prefHeight="446.0" prefWidth="233.0" style="-fx-background-color: #6D62C2;">
+                           <children>
+                              <TextField fx:id="filterField" alignment="CENTER" prefHeight="39.0" prefWidth="195.0" promptText="Search Using any Attribute">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                              </TextField>
+                           </children></VBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+          <Tab text="Add A New Employee">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <GridPane layoutX="17.0" layoutY="15.0" prefWidth="442.0">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="215.0" minWidth="10.0" prefWidth="180.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="285.0" minWidth="10.0" prefWidth="262.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <Label text="Enter The First Name" />
+                              <Label text="Enter The Last Name" GridPane.rowIndex="1" />
+                              <Label text="Enter The SSN" GridPane.rowIndex="2" />
+                              <Label text="Enter The Department Name" GridPane.rowIndex="3" />
+                              <TextField fx:id="txt_Fname" style="-fx-background-radius: 100;" GridPane.columnIndex="1" />
+                              <TextField fx:id="txt_Lname" style="-fx-background-radius: 100;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="txt_SSN" style="-fx-background-radius: 100;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <TextField fx:id="txt_DepID" style="-fx-background-radius: 100;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Label text="Enter Employee Address" GridPane.rowIndex="4" />
+                              <TextField fx:id="txt_Address" style="-fx-background-radius: 100;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                           </children>
+                        </GridPane>
+                        <Button fx:id="insertButton" layoutX="220.0" layoutY="167.0" mnemonicParsing="false" onAction="#insertEmp" text="Insert Data" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <HBox alignment="CENTER_LEFT" prefHeight="96.0" prefWidth="900.0" style="-fx-background-color: #524992;">
+         <children>
+            <ImageView fitHeight="50.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@ICO/userBlack.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </ImageView>
+            <Label contentDisplay="CENTER" prefHeight="53.0" prefWidth="193.0" text="Employees" textFill="WHITE">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Broadway" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
